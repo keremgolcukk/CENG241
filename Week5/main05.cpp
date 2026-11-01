@@ -24,7 +24,9 @@ int main() {
     obj2.func2(obj1);  // Calls func2 on obj2, passing obj1 as an argument
 
     cout << "obj1.prv_member = " << obj1.getPrvMember() << endl;
-    cout << "obj2.prv_member = " << obj2.getPrvMember() << endl;  // Why do we get 2 here?
-
+    cout << "obj2.prv_member = " << obj2.getPrvMember() << endl;    /* Why do we get 2 here? - 
+                                                                    We don't get 2 here, we get a garbage value or 0 depending on the compiler and settings. 
+                                                                    This is because obj2's prv_member was never initialized or modified,
+                                                                    so it contains an indeterminate value.*/ 
     return 0;
 }
