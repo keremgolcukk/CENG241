@@ -8,20 +8,16 @@ class B;
 
 class A {
     int x;
-
     public:
     A(int n=0): x(n) {}
     friend class B;
 };
 class B {
-    int y;
-
     public:
     int f(A &);
 };
 int B::f(A &obj) {
-    y = obj.x;
-    return y;
+    return obj.x;
 }
 
 int main() {
